@@ -1,38 +1,64 @@
 {
     const tasks = [
+
         {
-            content: "zjesc pierogi",
-            done: true
+            content: "Zjeść buritto",
+            done: true,
         },
         {
-            content: "odrobic lekcje z programowania",
-            done: true
+            content: "Pouczyć się programowania",
+            done: false,
+        },
+        {
+            content: "Pograć w battlefielda",
+            done: false,
         },
 
     ];
 
+   const render = () => {
+
+    let stringList = ""
+
+    for(task of tasks){
+
+        stringList += `<li>${task.content}</li>`
 
 
-    const render = () => {
+    };
 
-        let htmlString = "";
-
-        for (const task of tasks)
-            htmlString += `
-        <li>
-      ${task.content}
-        </li>
-        `;
+    document.querySelector(".js-tasks").innerHTML = stringList;
 
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+   }
+
+
+
+
+
+
+
+    const onFormSubmit = (event) => {
+
+        event.preventDefault();
+
     }
 
-    const onFormSubmit = document.querySelector(".js-form")
 
-    const init = () =>
+
+
+    const init = () => {
+
+        const form = document.querySelector(".js-form")
+
+        form.addEventListener("submit", onFormSubmit)
+
         render();
 
+    }
+
     init();
+
 
 }

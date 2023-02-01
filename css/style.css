@@ -1,12 +1,22 @@
 html {
     box-sizing: border-box;
 }
+
 *, ::after, ::before {
     box-sizing: inherit;
 }
 
+.body {
+    background-color: aquamarine;
+}
 
+.container {
+    padding: 100px;
+    border: 100px;
+    text-align: center;
+}
 
-
-
+.button { 
+    text-align: center;
+}
 
