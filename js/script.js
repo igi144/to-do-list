@@ -16,24 +16,38 @@
 
     ];
 
-    const render = () => {
 
-        let stringList = ""
+    const removeTask = (index) => {
 
-        for (task of tasks) {
+        tasks.splice(index, 1);
 
-            stringList += `
-        
-            <li
-        ${task.done ? " style= \"text-decoration: line-through\"" : ""}
-        >
-        ${task.content}
-        </li>
-        
-        `
+        render();
+    }
 
-            document.querySelector(".js-tasks").innerHTML = stringList;
-        }
+    const toggleTask = (taskIndex) => {
+
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+
+        render();
+    }
+
+    bindEvents = () => {
+
+        const removeButtons = document.querySelectorAll(".js-remove")
+        removeButtons.forEach((removeButtons, index) => {
+            removeButtons.addEventListener("click", () => {
+                removeTask(index);
+            })
+
+        })
+
+        const toggleButtons = document.querySelectorAll(".js-taskDone")
+        toggleButtons.forEach((toggleButton, taskIndex) => {
+            toggleButton.addEventListener("click", () => {
+                toggleTask(taskIndex);
+            })
+
+        })
     }
 
     const addNewTask = (newTask) => {
@@ -45,6 +59,31 @@
 
         render();
 
+    }
+
+    const render = () => {
+
+        let stringList = ""
+
+        for (task of tasks) {
+
+            stringList += `
+        
+            <li
+        ${task.done ? " style= \"text-decoration: line-through\"" : ""}
+        >
+        <button class="js-taskDone">Zrobione?</button><button class="js-remove">Usuń</button>
+        ${task.content}
+     </li>
+        
+        `
+            document.querySelector(".js-tasks").innerHTML = stringList;
+
+            bindEvents();
+
+
+
+        }
     }
 
     const onFormSubmit = (event) => {
