@@ -16,46 +16,58 @@
 
     ];
 
-   const render = () => {
+    const render = () => {
 
-    let stringList = ""
+        let stringList = ""
 
-    for(task of tasks){
+        for (task of tasks) {
 
-        stringList += `<li>${task.content}</li>`
+            stringList += `
+        
+            <li
+        ${task.done ? " style= \"text-decoration: line-through\"" : ""}
+        >
+        ${task.content}
+        </li>
+        
+        `
 
+            document.querySelector(".js-tasks").innerHTML = stringList;
+        }
+    }
 
-    };
+    const addNewTask = (newTask) => {
 
-    document.querySelector(".js-tasks").innerHTML = stringList;
+        tasks.push({
+            content: newTask,
 
+        });
 
+        render();
 
-   }
-
-
-
-
-
-
+    }
 
     const onFormSubmit = (event) => {
 
         event.preventDefault();
 
+        const newTask = document.querySelector(".js-newTask").value.trim();
+
+        if (newTask === "") {
+            return
+        }
+
+        addNewTask(newTask);
+
     }
-
-
-
 
     const init = () => {
 
         const form = document.querySelector(".js-form")
 
-        form.addEventListener("submit", onFormSubmit)
+        form.addEventListener("submit", onFormSubmit,)
 
         render();
-
     }
 
     init();
