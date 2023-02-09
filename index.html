@@ -13,22 +13,34 @@
     <title>to-do-list</title>
 </head>
 
-<body>
+<body class="body">
+
+
+
+
+
+
+
     <form class="js-form">
-        <input class="js-newTask">
-        <button>Dodaj zadanie</button>
+        <div class="container">
+            <header class="cssForm--header">Dodaj nowe zadanie</header>
+            <input class="js-newTask cssForm--input" autofocus placeholder="Co jest do zrobienia?" value="">
+            <button class="newTaskButton">Dodaj zadanie</button>
+        </div>
+
+        <div class="container flex__item--list ">
+            <header class="cssForm--header">Lista Zadań</header>
+            <ul class="js-tasks"></ul>
+        </div>
+
     </form>
 
-    <ul class="js-tasks"></ul>
+
+
+
+
 
 
 </body>
-
-
-
-
-
-
-
 
 </html>
