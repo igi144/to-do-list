@@ -1,0 +1,36 @@
+.js-removeButton {
+    background-color: red;
+    border-style: none;
+}
+
+.js-toggleButton{ 
+background-color: rgb(12, 104, 0);
+border-style: none;
+width: 25px;
+height: 25px;
+}
+
+.js-toggleButton:hover{ 
+    background-color: hsl(121, 100%, 30%);
+    border-style: none;
+    width: 25px;
+    height: 25px;
+    }
+
+
+.js-toggleButton:active{ 
+    background-color: hsl(121, 100%, 30%);
+    border-style: none;
+    width: 25px;
+    height: 25px;
+    }
+
+.newTaskButton {
+    background-color: teal;
+    color: white;
+    font-size: 20px;
+    border-style: none;
+    padding: 3px;
+
+}
+

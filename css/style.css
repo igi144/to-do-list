@@ -6,60 +6,42 @@ html {
     box-sizing: inherit;
 }
 
-.body {
+.header {
+    padding-left: 20px;
+    font-size: 30px;
     
+
+
+}
+
+.body {
+
     max-width: 100%;
     background-color: #f3f3f3;
     font-size: 20px;
-    padding: 35px;
-    margin: 10px;
-
-
-}
-
-.cssForm {
-    
-    max-width: 100%;
-    padding: 10px;
-    margin: 0 auto;
-
-}
-
-.container {
-
-    padding: 20px;
-    margin: 10px;
-    width: 100%;
-    padding: 30px;
     padding: 50px;
-    background-color: white;
-}
+    margin: 20px;
 
-.cssForm--input {
-    max-width: 100%;
-}
-
-.newTaskButton {
-    background-color: teal;
-    color: white;
-    font-size: 20px;
-    border-style: none;
-    padding: 3px;
 
 }
 
-.cssForm--header {
-    font: bold;
+
+.js__listClass {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items:center;
     padding: 10px;
-
-}
-
-.listClass {
-    justify-content: space-between;
-    display: flex;
+    border-bottom: 1px solid rgb(238, 238, 238)
+    
 
 }
 
 
-/* justify-content: space-between;
-    display: flex; */
+
+.tasks__content--done {
+
+    text-decoration: line-through;
+}
+
+

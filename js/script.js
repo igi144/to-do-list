@@ -9,8 +9,19 @@
 
             stringList += `
             
-            <li class="listClass">
-            <button class="js-toggleButton button">skreśl</button>${task.content}<button class="js-removeButton button"><img src="jpg/pngwing.com.png"></button>   
+            <li 
+            class="js__listClass" 
+            >
+
+             <button class="js-toggleButton">
+            ${task.done ? "✓" : ""}
+            </button>
+           
+           <span ${task.done ? " style=\"text-decoration: line-through\"   " : ""}> ${task.content}</span>
+           
+           <button class="js-removeButton button">
+           <img src="jpg/pngwing.com.png">
+           </button>
              </li>
              
             `
