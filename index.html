@@ -8,31 +8,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Libre+Franklin&display=swap"
+        rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
-    <link href="css/container.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
     <link href="css/button.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
     <title>to-do-list</title>
 </head>
 
 <body class="body">
-
-    <header class="header">Lista zadań</header>
-    <form class="js-form">
-        <div class="container">
-            <h1 class="form__header">Dodaj nowe zadanie</h1>
-            <input class="js-newTask form__input" autofocus placeholder="Co jest do zrobienia?" value="">
-            <button class="newTaskButton">Dodaj zadanie</button>
-        </div>
-
-        <div class="container">
-            <h2 class= "form__header">Lista Zadań</h2>
-            <ul class="js-tasks"></ul>
-        </div>
-
-    </form>
-
+    <main>
+        <header>
+            <h1>Lista zadań</h1>
+        </header>
+        <section class="section">
+            <h2 class="section__header">Dodaj nowe zadanie</h2>
+            <div class="section__body">
+                <form class="js-form">
+                    <input class="js-newTask js-input" autofocus placeholder="Co jest do zrobienia?" value="">
+                    <button class="newTaskButton">Dodaj zadanie</button>
+                </form>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section__header">Lista Zadań</h2>
+            <div class="section__body">
+                <ul class="js-tasks"></ul>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

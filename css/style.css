@@ -9,39 +9,15 @@ html {
 .header {
     padding-left: 20px;
     font-size: 30px;
-    
-
-
 }
 
 .body {
-
+    font-family: 'Lato', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
     max-width: 100%;
     background-color: #f3f3f3;
     font-size: 20px;
     padding: 50px;
     margin: 20px;
-
-
 }
-
-
-.js__listClass {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-gap: 10px;
-    align-items:center;
-    padding: 10px;
-    border-bottom: 1px solid rgb(238, 238, 238)
-    
-
-}
-
-
-
-.tasks__content--done {
-
-    text-decoration: line-through;
-}
-
 

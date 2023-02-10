@@ -1,36 +1,57 @@
+.js-tasks {
+    padding: 40px;
+}
+
 .js-removeButton {
     background-color: red;
     border-style: none;
 }
 
-.js-toggleButton{ 
-background-color: rgb(12, 104, 0);
-border-style: none;
-width: 25px;
-height: 25px;
+.js-input {
+    width: 75%;
+    padding: 10px;
 }
 
-.js-toggleButton:hover{ 
+.js__listClass {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(238, 238, 238)
+}
+
+.js-toggleButton {
+    background-color: rgb(12, 104, 0);
+    border-style: none;
+    width: 25px;
+    height: 25px;
+}
+
+.js-toggleButton:hover {
     background-color: hsl(121, 100%, 30%);
     border-style: none;
     width: 25px;
     height: 25px;
-    }
+}
 
-
-.js-toggleButton:active{ 
+.js-toggleButton:active {
     background-color: hsl(121, 100%, 30%);
     border-style: none;
     width: 25px;
     height: 25px;
-    }
+}
+
+.js__content--done {
+
+    text-decoration: line-through;
+}
 
 .newTaskButton {
     background-color: teal;
     color: white;
     font-size: 20px;
     border-style: none;
-    padding: 3px;
-
+    padding: 11px;
+    border-radius: 5px
 }
-
