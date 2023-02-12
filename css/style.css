@@ -22,3 +22,14 @@ html {
     
 }
 
+.main {
+display: flex;
+flex-direction: column;
+}
+
+@media(max-width: 767px) {
+    .main {
+        flex-basis: 100%;
+    }
+}
+
