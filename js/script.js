@@ -80,8 +80,6 @@
             jsNewTask.value = "";
             jsNewTask.focus();
         }
-        
-
     }
 
     const init = () => {
