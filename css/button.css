@@ -1,48 +1,30 @@
-.js-tasks {
-    padding: 40px;
-}
-
-.js-removeButton {
+.removeButton {
     background-color: red;
     border-style: none;
 }
 
-.js-input {
-    width: 75%;
-    padding: 10px;
-}
-
-.js__listClass {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-gap: 10px;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid rgb(238, 238, 238)
-}
-
-.js-toggleButton {
+.toggleButton {
     background-color: rgb(12, 104, 0);
     border-style: none;
     width: 25px;
     height: 25px;
 }
 
-.js-toggleButton:hover {
-    background-color: hsl(121, 100%, 30%);
+.toggleButton:hover {
+    background-color: hsl(121, 100%, 70%);
     border-style: none;
     width: 25px;
     height: 25px;
 }
 
-.js-toggleButton:active {
-    background-color: hsl(121, 100%, 30%);
+.toggleButton:active {
+    background-color: hsl(121, 100%, 50%);
     border-style: none;
     width: 25px;
     height: 25px;
 }
 
-.js__content--done {
+.contentDone {
 
     text-decoration: line-through;
 }

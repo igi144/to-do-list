@@ -12,18 +12,17 @@ html {
 }
 
 .body {
-    font-family: 'Lato', sans-serif;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Lato', sans-serif, 'Libre Franklin', sans-serif;
     max-width: 100%;
     background-color: #f3f3f3;
     font-size: 20px;
     padding: 10px 100px 130px 100px;
-    
 }
 
 .main {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media(max-width: 767px) {
@@ -31,4 +30,3 @@ flex-direction: column;
         flex-basis: 100%;
     }
 }
-
