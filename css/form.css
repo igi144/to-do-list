@@ -1,3 +1,10 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
 .formTasks {
     display: flex;
     flex-direction: column;

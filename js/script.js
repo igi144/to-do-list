@@ -73,13 +73,14 @@
         event.preventDefault();
 
         const jsNewTask = document.querySelector(".js-newTask");
-        const jsNewTaskWord = jsNewTask.value.trim();
+        const newTaskContent = jsNewTask.value.trim();
 
-        if (jsNewTaskWord !== "") {
-            addNewTask(jsNewTaskWord);
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
             jsNewTask.value = "";
+            jsNewTask.focus();
         }
-        jsNewTask.focus();
+        
 
     }
 
