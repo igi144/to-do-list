@@ -1,6 +1,7 @@
 .form {
     display: flex;
     flex-wrap: wrap;
+    word-wrap: break-word;
     grid-gap: 10px;
     padding: 10px;
 }
