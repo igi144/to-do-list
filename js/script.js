@@ -12,7 +12,7 @@
             <button class="js-toggleButton toggleButton">
             ${task.done ? "✓" : ""}
             </button>
-            <span class="${task.done ? " js__content--done contentDone " : ""}"> 
+            <span class="${task.done ? " js__content--done tasks__contentDone " : ""}"> 
             ${task.content}
             </span>
             <button class="js-removeButton removeButton button">

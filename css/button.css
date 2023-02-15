@@ -31,7 +31,7 @@
     height: 25px;
 }
 
-.contentDone {
+.tasks__contentDone {
 
     text-decoration: line-through;
 }
