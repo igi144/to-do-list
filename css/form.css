@@ -1,9 +1,14 @@
 .form {
-    display: flex;
-    flex-wrap: wrap;
-    word-wrap: break-word;
-    grid-gap: 10px;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 15px ;
+    
+}
+
+@media (max-width: 767px){
+    .form {
+        grid-template-columns: 1fr; 
+    }
 }
 
 .formTasks {
@@ -16,7 +21,6 @@
 }
 
 .formInput {
-    width: 75%;
     padding: 10px;
 }
 
