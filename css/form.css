@@ -11,12 +11,10 @@
     }
 }
 
-.formTasks {
+.tasksList {
     display: flex;
     flex-direction: column;
     padding: 0px;
-    word-wrap: break-word;
-    flex-wrap: wrap;
     margin: 0px;
 }
 
@@ -24,7 +22,7 @@
     padding: 10px;
 }
 
-.formListClass {
+.tasks__item {
     display: grid;
     word-wrap: break-word;
     grid-template-columns: auto 1fr auto;

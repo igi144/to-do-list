@@ -8,7 +8,7 @@
 
             stringList +=
             `
-            <li class="js__listClass  formListClass">
+            <li class="js__listClass  tasks__item">
             <button class="js-toggleButton toggleButton">
             ${task.done ? "✓" : ""}
             </button>
