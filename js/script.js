@@ -2,25 +2,20 @@
     const tasks = []
 
     const render = () => {
-
         let stringList = ""
-
+        
         for (task of tasks) {
 
             stringList +=
-                `
-            <li class="js__listClass formListClass">
-
-              <button class="js-toggleButton toggleButton">
-              ${task.done ? "✓" : ""}
-              </button>
-           
-              <span class="${task.done ? " js__content--done contentDone " : ""}"> 
-              
-              ${task.content}
-              </span>
-           
-              <button class="js-removeButton removeButton button">
+            `
+            <li class="js__listClass  formListClass">
+            <button class="js-toggleButton toggleButton">
+            ${task.done ? "✓" : ""}
+            </button>
+            <span class="${task.done ? " js__content--done contentDone " : ""}"> 
+            ${task.content}
+            </span>
+            <button class="js-removeButton removeButton button">
               <img src="jpg/pngwing.com.png">
               </button>
              </li>
