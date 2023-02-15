@@ -1,13 +1,20 @@
 .removeButton {
     background-color: red;
-    border-style: none;
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0;
 }
 
 .toggleButton {
     background-color: rgb(12, 104, 0);
     border-style: none;
-    width: 25px;
-    height: 25px;
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0;
 }
 
 .toggleButton:hover {

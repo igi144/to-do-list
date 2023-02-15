@@ -14,10 +14,10 @@
 .formTasks {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    justify-content: center;
+    padding: 0px;
     word-wrap: break-word;
     flex-wrap: wrap;
+    margin: 0px;
 }
 
 .formInput {
@@ -26,6 +26,7 @@
 
 .formListClass {
     display: grid;
+    word-wrap: break-word;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
     align-items: center;
