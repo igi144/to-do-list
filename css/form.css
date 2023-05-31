@@ -11,6 +11,22 @@
     }
 }
 
+.tasks__item {
+    display: grid;
+    word-wrap: break-word;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(238, 238, 238)
+}
+
+.hide {
+    background-color: teal;
+    
+    
+}
+
 .tasksList {
     display: flex;
     flex-direction: column;
@@ -31,4 +47,11 @@
     padding: 10px;
     border-bottom: 1px solid rgb(238, 238, 238)
 }
+
+.tasks__hide {
+    display: none;
+}
+
+
+
 
