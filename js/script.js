@@ -10,58 +10,29 @@
         if (tasks.length === 0) {
             buttons.innerHTML = "";
         } else {
-
             htmlButtons += `
                     <button class="button__hideDone buttons__button">
-                       <span class="buttonName">Ukryj ukończone </span>
+                       ${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}
                     </button>
                     <button class="js-buttonComplete button__completeAll buttons__button">
                     Ukończ wszystkie    
                     </button>
             `;
-        };
-        buttons.innerHTML = htmlButtons;
+            buttons.innerHTML = htmlButtons;
+            const buttonHideDone = document.querySelector(".button__hideDone")
 
-        const buttonName = document.querySelector(".buttonName")
+            buttonHideDone.addEventListener("click", () => {
+                hideDoneTasks = !hideDoneTasks
+                render();
+            })
 
-        hideTasks(buttonName);
-        allDone();
-
-    }
-
-    const allDone = () => {
-        if (tasks.length === 0) {
-            return
-        }
-        else {
             const completeButton = document.querySelector(".js-buttonComplete")
             completeButton.addEventListener("click", () => {
-                const task = document.querySelector(".js-tasks")
-                task.classList.add("tasks__contentDone")
+
+                task.done = true
+                render();
             })
-        }
-    }
-
-    const hideTasks = (buttonName) => {
-        if (tasks.length === 0) {
-            return
-        }
-        else {
-            if (task.done) {
-                const hide = document.querySelector(".button__hideDone")
-                hide.addEventListener("click", () => {
-                    const task = document.querySelector(".js-tasks")
-                    task.classList.toggle("tasks__hide")
-
-                    if (task.classList.contains("tasks__hide")) {
-                        buttonName.innerHTML = "Pokaż ukończone"
-                    }
-                    else {
-                        buttonName.innerHTML = "Ukryj ukończone"
-                    }
-                })
-            }
-        }
+        };
     }
 
     const bindTasks = () => {
@@ -71,7 +42,8 @@
 
             stringList +=
                 `
-                <li class="js__listClass  tasks__item hideDoneTasks ">
+                <li class="js__listClass  tasks__item ${task.done && hideDoneTasks ? "tasks__hide" : ""
+                }">
                 <button class="js-toggleButton toggleButton">
                 ${task.done ? "✓" : ""}
                 </button>
@@ -152,10 +124,3 @@
 
     init();
 }
-
-
-
-
-
-
-
