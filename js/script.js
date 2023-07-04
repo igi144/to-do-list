@@ -130,7 +130,6 @@
         const form = document.querySelector(".js-form")
         form.addEventListener("submit", onFormSubmit)
     }
-
     init();
 }
 
