@@ -27,8 +27,3 @@ html {
     flex-direction: column;
 }
 
-@media(max-width: 767px) {
-    .main {
-        flex-basis: 100%;
-    }
-}

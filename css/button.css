@@ -1,10 +1,16 @@
 .removeButton {
     background-color: red;
+    border-style: none;
     border: none;
-    color: white;
     width: 30px;
     height: 30px;
-    padding: 0;
+    transition: 1s;
+}
+
+.removeButton:hover {
+    background-color: hsl(0, 100%, 70%);
+    width: 25px;
+    height: 25px;
 }
 
 .toggleButton {
@@ -15,10 +21,11 @@
     width: 30px;
     height: 30px;
     padding: 0;
+    transition: 1s;
 }
 
 .toggleButton:hover {
-    background-color: hsl(121, 100%, 70%);
+    background-color: hsl(121, 100%, 50%);
     border-style: none;
     width: 25px;
     height: 25px;
@@ -32,7 +39,6 @@
 }
 
 .tasks__contentDone {
-
     text-decoration: line-through;
 }
 
@@ -43,6 +49,11 @@
     border-style: none;
     padding: 11px;
     border-radius: 5px;
+    transition: 1s;
+}
+
+.newTaskButton:hover {
+    transform: scale(1.1);
 }
 
 .tasksButtons {
@@ -50,10 +61,13 @@
     background-color: white;
     border-style: none;
     padding-right: 10px;
+    transition: 1s;
+}
+
+.tasksButtons:hover {
+    color: hsl(180, 100%, 40%);
 }
 
 .tasksDoneButton {
     color: rgb(182, 182, 182)
 }
-
-

@@ -1,13 +1,13 @@
 .form {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-gap: 15px ;
-    
+    grid-gap: 15px;
+
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .form {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
 
@@ -23,8 +23,6 @@
 
 .hide {
     background-color: teal;
-    
-    
 }
 
 .tasksList {
@@ -51,9 +49,3 @@
 .tasks__hide {
     display: none;
 }
-
-
-
-
-
-
