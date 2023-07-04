@@ -1,6 +1,6 @@
 # to-do list
 
-![gif](https://github.com/igi144/to-do-list/blob/main/jpg/Animation.gif?raw=true)
+![Animation](https://github.com/igi144/to-do-list/assets/119010431/0552dfad-7f6c-47ac-926c-74bb2331c2ee)
 
 ## Descripction
 This is the page where you can create your task list.
