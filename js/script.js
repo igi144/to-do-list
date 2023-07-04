@@ -8,21 +8,18 @@ const addNewTask = (newTask) => {
     render();
 }
 
-
 const removeTask = (index) => {
     tasks = [...tasks.slice(0, index),
     ...tasks.slice(index + 1)]
     render();
 }
 
-const scratchTask = (indexTask) => {
-    tasks[indexTask].done = !tasks[indexTask].done;
+const scratchTask = (index) => {
+    tasks = [...tasks.slice(0, index),
+    { ...tasks[index], done: !tasks[index].done },
+    ...tasks.slice(index + 1)]
     render();
 }
-
-
-
-
 
 const completeAllTasks = () => {
     tasks = tasks.map((task) => ({ ...task, done: true }));
