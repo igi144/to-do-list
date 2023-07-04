@@ -45,3 +45,15 @@
     border-radius: 5px;
 }
 
+.tasksButtons {
+    color: teal;
+    background-color: white;
+    border-style: none;
+    padding-right: 10px;
+}
+
+.tasksDoneButton {
+    color: rgb(182, 182, 182)
+}
+
+

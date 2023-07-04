@@ -5,6 +5,9 @@
 }
 
 .section__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 20px;
     padding: 20px;
     margin: 10px 0;
