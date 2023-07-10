@@ -3,20 +3,27 @@
     let hideDoneTasks = false
 
     const addNewTask = (newTask) => {
-        tasks = [...tasks,
-        { content: newTask }]
+        tasks = [
+            ...tasks,
+            { content: newTask }
+        ];
         render();
     }
 
     const removeTask = (index) => {
-        tasks = [...tasks.slice(0, index),
-        ...tasks.slice(index + 1)]
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1)
+        ]
         render();
     }
 
-    const scratchTask = (index) => {
+    const toggleTaskDone = (index) => {
         tasks = [...tasks.slice(0, index),
-        { ...tasks[index], done: !tasks[index].done },
+        {
+            ...tasks[index],
+            done: !tasks[index].done
+        },
         ...tasks.slice(index + 1)]
         render();
     }
@@ -26,8 +33,8 @@
         render();
     }
 
-    const tasksButtonsEvents = () => {
-        const buttonHideDone = document.querySelector(".js-button__hideDone")
+    const bindButtonsEvents = () => {
+        const buttonHideDone = document.querySelector(".js-buttonHideDone")
 
         buttonHideDone.addEventListener("click", () => {
             hideDoneTasks = !hideDoneTasks
@@ -41,37 +48,14 @@
         })
     }
 
-    const bindButtons = () => {
-
-        let htmlButtons = ""
-        const buttons = document.querySelector(".js-buttons")
-
-        if (tasks.length === 0) {
-            buttons.innerHTML = "";
-        } else {
-            htmlButtons += `
-                    <button class="js-button__hideDone tasksButtons">
-                    ${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}
-                    </button>
-                    <button class="${tasks.every(({ done }) => done) ? "disabled && tasksDoneButton" : ""} js-buttonComplete  tasksButtons button__completeAll"
-                    >
-                    Ukończ wszystkie    
-                    </button>
-                `;
-            buttons.innerHTML = htmlButtons;
-
-            tasksButtonsEvents();
-        };
-    }
-
-    const bindTasks = () => {
+    const renderTasks = () => {
         let stringList = ""
 
         for (task of tasks) {
 
             stringList +=
                 `
-             <li class="${task.done && hideDoneTasks ? "tasks__hide" : ""} js__listClass  tasks__item ">
+             <li class="${task.done && hideDoneTasks ? "tasksHide" : ""} tasks__item ">
               <button class="js-toggleButton toggleButton ">
                 ${task.done ? "✓" : ""}
               </button>
@@ -85,6 +69,29 @@
             `
         }
         document.querySelector(".js-tasks").innerHTML = stringList;
+    }
+
+    const renderButtons = () => {
+
+        let htmlButtons = ""
+        const buttons = document.querySelector(".js-buttons")
+
+        if (tasks.length === 0) {
+            buttons.innerHTML = "";
+        } else {
+            htmlButtons += `
+                    <button class="js-buttonHideDone tasksButtons">
+                    ${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}
+                    </button>
+                    <button class="${tasks.every(({ done }) => done) ? "disabled && tasksDoneButton" : ""} js-buttonComplete  tasksButtons button__completeAll"
+                    >
+                    Ukończ wszystkie    
+                    </button>
+                `;
+            buttons.innerHTML = htmlButtons;
+
+            bindButtonsEvents();
+        };
     }
 
     const bindEvents = () => {
@@ -101,7 +108,7 @@
 
         toggleTask.forEach((toggle, indexTask) => {
             toggle.addEventListener("click", () => {
-                scratchTask(indexTask);
+                toggleTaskDone(indexTask);
             })
         })
     }
@@ -109,20 +116,20 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const jsNewTask = document.querySelector(".js-newTask");
-        const newTaskContent = jsNewTask.value.trim();
+        const newTask = document.querySelector(".js-newTask");
+        const newTaskContent = newTask.value.trim();
 
         if (newTaskContent !== "") {
             addNewTask(newTaskContent);
-            jsNewTask.value = "";
-            jsNewTask.focus();
+            newTask.value = "";
+            newTask.focus();
         }
     }
 
     const render = () => {
-        bindTasks();
+        renderTasks();
+        renderButtons();
         bindEvents();
-        bindButtons();
     }
 
     const init = () => {
@@ -132,5 +139,3 @@
     }
     init();
 }
-
-

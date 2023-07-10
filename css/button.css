@@ -9,8 +9,8 @@
 
 .removeButton:hover {
     background-color: hsl(0, 100%, 70%);
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
 }
 
 .toggleButton {
@@ -27,8 +27,8 @@
 .toggleButton:hover {
     background-color: hsl(121, 100%, 50%);
     border-style: none;
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
 }
 
 .toggleButton:active {
