@@ -37,37 +37,3 @@
     width: 25px;
     height: 25px;
 }
-
-.tasks__contentDone {
-    text-decoration: line-through;
-}
-
-.newTaskButton {
-    background-color: teal;
-    color: white;
-    font-size: 20px;
-    border-style: none;
-    padding: 11px;
-    border-radius: 5px;
-    transition: 1s;
-}
-
-.newTaskButton:hover {
-    transform: scale(1.1);
-}
-
-.tasksButtons {
-    color: teal;
-    background-color: white;
-    border-style: none;
-    padding-right: 10px;
-    transition: 1s;
-}
-
-.tasksButtons:hover {
-    color: hsl(180, 100%, 40%);
-}
-
-.tasksDoneButton {
-    color: rgb(182, 182, 182)
-}
